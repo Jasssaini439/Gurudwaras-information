@@ -50,7 +50,7 @@ const History = () => {
 <div className="flex justify-end items-center">
   <img
     src="/tengurus/Gurugobindsinghg.jpg"
-    className="img-fluid rounded-top mr-4 md:mr-10 rounded-lg h-60 md:h-80 -mt-10 md:-mt-[540px]"
+    className="img-fluid rounded-top mr-4 md:mr-10 rounded-lg h-60 md:h-80 -mt-2 md:-mt-[540px]"
     alt=""
   />
 </div>
