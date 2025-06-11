@@ -10,6 +10,7 @@ import About from './Pages/About';
 import Contact from './Pages/Contact';
 import DarkModeToggle from './Components/DarkModeToggle';
 import DonateForm from './Pages/DonateForm';
+import ScrollToTop from './Components/ ScrollToTop';
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
     <>
     <div className='bg-white dark:bg-black text-black dark:text-white'>
    <Router>
+    <ScrollToTop/>
      <Navbar/>
       <DarkModeToggle/>
        <Routes>
