@@ -1,6 +1,6 @@
 import React from 'react'
 import Tengurus from '../Components/History/Tengurus'
-import Fivepyaras from '../Components/History/fivepyaras'
+import Fivepyaras from '../Components/History/Fivepyaras'
 
 const History = () => {
     return (
