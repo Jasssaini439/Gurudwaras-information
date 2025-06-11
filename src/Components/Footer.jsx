@@ -18,10 +18,10 @@ const Footer = () => {
         <div className="flex flex-wrap justify-center gap-4 mb-6 text-sm md:text-base">
           <a href="/" className="text-gray-500 hover:text-orange-600 transition">Home</a>
           <a href="/Gurudwaras" className="text-gray-500 hover:text-orange-600 transition">Gurudwaras</a>
-          <a href="/History" className="text-gray-500 hover:text-orange-600 transition">History</a>
-          <a href="/Donate" className="text-gray-500 hover:text-orange-600 transition">Donate</a>
-          <a href="/About" className="text-gray-500 hover:text-orange-600 transition">About</a>
-          <a href="/Contact" className="text-gray-500 hover:text-orange-600 transition">Contact</a>
+          <a href="/history" className="text-gray-500 hover:text-orange-600 transition">History</a>
+          <a href="/donate" className="text-gray-500 hover:text-orange-600 transition">Donate</a>
+          <a href="/about" className="text-gray-500 hover:text-orange-600 transition">About</a>
+          <a href="/contact" className="text-gray-500 hover:text-orange-600 transition">Contact</a>
         </div>
 
         {/* Social Icons */}

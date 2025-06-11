@@ -16,7 +16,7 @@ const Servicesitem = [
         description: 'Selfless service to the communityy',
         image: '/icons/donation.jpg',
         bgColor: 'bg-blue-900',
-        route:""
+        route:"/donate"
     },
     {
         id: 3,
@@ -40,7 +40,7 @@ const Servicesitem = [
         description: 'Free medical services and check-ups',
         image: '/icons/contacts.png',
         bgColor: 'bg-orange-800',
-        route:""
+        route:"/contact"
     }
 ]
 
