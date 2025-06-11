@@ -8,26 +8,25 @@ const Gurudwaras = () => {
 
   return (
    <>
-  <div className="relative w-full h-[650px]  overflow-hidden">
+  <div className="relative w-full h-[500px] md:h-[650px] overflow-hidden">
   <img
     src="/p1.jpg"
     alt="Gurudwara"
     className="w-full h-full object-cover"
   />
- <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-6 pb-28">
-  <div className="backdrop-blur-sm bg-white/10 p-8 rounded-xl shadow-lg ml-12 max-w-3xl">
-    <h1 className="text-5xl font-bold text-orange-400 tracking-wide mb-4 uppercase">
-      Gurudwaras
-    </h1>
-    <p className="text-white text-xl leading-relaxed ">
-      A Gurudwara is a sacred place of peace, devotion, and selfless service,
-      where everyone is welcomed with love and equality.
-    </p>
+  <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-4 md:px-6 pb-16 md:pb-28">
+    <div className="backdrop-blur-sm bg-white/10 p-6 md:p-8 rounded-xl shadow-lg max-w-lg md:max-w-3xl mx-auto">
+      <h1 className="text-3xl md:text-5xl font-bold text-orange-400 tracking-wide mb-4 uppercase">
+        Gurudwaras
+      </h1>
+      <p className="text-white text-md md:text-xl leading-relaxed">
+        A Gurudwara is a sacred place of peace, devotion, and selfless service,
+        where everyone is welcomed with love and equality.
+      </p>
+    </div>
   </div>
 </div>
 
-
-</div>
 <div className='bg-white dark:bg-black text-black dark:text-white'>
 <AboutGurudwaras/>
 <h1 className="text-[4rem] font-bold capitalize text-center text-orange-500 mt-20">some main Gurudwaras

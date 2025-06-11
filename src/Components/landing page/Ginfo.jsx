@@ -85,37 +85,38 @@ const Ginfo = () => {
         {/* modal */}
 
         {selectedGurudwara && (
-           
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-white rounded-xl shadow-lg max-w-2xl w-full p-6 relative">
-              <button
-                onClick={() => setSelectedGurudwara(null)}
-                className="absolute top-2 right-2 text-gray-700 hover:text-red-600"
-              >
-                <X />
-              </button>
-              <img
-                src={selectedGurudwara.image}
-                className="w-full max-h-[500px] object-contain rounded-lg mb-4"
-                alt={selectedGurudwara.title}
-              />
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4">
+    <div className="bg-white rounded-xl shadow-lg w-full max-w-md sm:max-w-xl md:max-w-2xl p-4 sm:p-6 relative max-h-[90vh] overflow-y-auto">
+      <button
+        onClick={() => setSelectedGurudwara(null)}
+        className="absolute top-2 right-2 text-gray-700 hover:text-red-600"
+      >
+        <X />
+      </button>
 
-              <h2 className="text-2xl font-bold text-orange-600 mb-2">{selectedGurudwara.title}</h2>
-              <p className="text-gray-700 mb-1">
-                <strong>Location:</strong> {selectedGurudwara.location}
-              </p>
-              <p className="text-gray-600 mt-4">
-                <strong>Details:</strong> {selectedGurudwara.description}
-              </p>
-              <p className="text-gray-600 mt-2">
-                <strong>Associated Guru:</strong> {selectedGurudwara.associatedGuru}
-              </p>
-              <p className="text-gray-600 mt-2">
-                <strong>Significance:</strong> {selectedGurudwara.significance}
-              </p>
-            </div>
-          </div>
-        )}
+      <img
+        src={selectedGurudwara.image}
+        className="w-full max-h-[300px] sm:max-h-[400px] md:max-h-[500px] object-contain rounded-lg mb-4"
+        alt={selectedGurudwara.title}
+      />
+
+      <h2 className="text-xl sm:text-2xl font-bold text-orange-600 mb-2">{selectedGurudwara.title}</h2>
+      <p className="text-gray-700 text-sm sm:text-base mb-1">
+        <strong>Location:</strong> {selectedGurudwara.location}
+      </p>
+      <p className="text-gray-600 text-sm sm:text-base mt-4">
+        <strong>Details:</strong> {selectedGurudwara.description}
+      </p>
+      <p className="text-gray-600 text-sm sm:text-base mt-2">
+        <strong>Associated Guru:</strong> {selectedGurudwara.associatedGuru}
+      </p>
+      <p className="text-gray-600 text-sm sm:text-base mt-2">
+        <strong>Significance:</strong> {selectedGurudwara.significance}
+      </p>
+    </div>
+  </div>
+)}
+
 
       </div>
 

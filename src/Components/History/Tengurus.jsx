@@ -174,35 +174,51 @@ const Tengurus = () => {
 
       {/* Modal */}
       {isModalOpen && selectedGuru && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center">
-          <div className="bg-white rounded-xl shadow-xl max-w-[800px] w-full p-6 relative">
-            <button
-              className="absolute top-2 right-2 text-xl font-bold text-gray-700 hover:text-black"
-              onClick={closeModal}
-            >
-              &times;
-            </button>
-            <div className="flex flex-col md:flex-row items-center">
-              <img
-                src={selectedGuru.image}
-                alt={selectedGuru.title}
-                className="w-[250px] h-[250px] object-cover rounded-lg mr-6 mb-4 md:mb-0"
-              />
-              <div>
-                <h2 className="text-2xl font-bold text-orange-600 mb-2">
-                  {selectedGuru.title}
-                </h2>
-                <p className='text-gray-700 mb-2'>Date of Birth:  {selectedGuru.dob}</p>
-                <p className='text-gray-700 mb-2'>Date of Joti jot:  {selectedGuru.dod}</p>
-                <p className='text-gray-700 mb-2'>Place of Birth:  {selectedGuru.pob}</p>
-                <p className='text-gray-700 mb-2'>Date of Guruship:  {selectedGuru.Guruship}</p>
-                <p className="text-gray-700 mb-2 mt-8">{selectedGuru.description}</p>
-                <p className="text-gray-600 text-sm">{selectedGuru.moreInfo}</p>
-              </div>
-            </div>
-          </div>
+  <div
+    className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center px-4"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div className="bg-white rounded-2xl shadow-2xl w-full max-w-[850px] relative animate-fadeIn">
+      {/* Close Button */}
+      <button
+        aria-label="Close Modal"
+        className="absolute top-4 right-4 text-2xl text-gray-500 hover:text-black transition"
+        onClick={closeModal}
+      >
+        &times;
+      </button>
+
+      {/* Content */}
+      <div className="flex flex-col md:flex-row items-center gap-6 p-6">
+        {/* Image */}
+        <img
+          src={selectedGuru.image}
+          alt={`Portrait of ${selectedGuru.title}`}
+          className="w-[250px] h-[250px] object-cover rounded-xl shadow-md"
+        />
+
+        {/* Details */}
+        <div className="text-center md:text-left max-w-md">
+          <h2 className="text-3xl font-extrabold text-orange-600 mb-2">
+            {selectedGuru.title}
+          </h2>
+
+          <ul className="text-gray-700 space-y-1 text-sm">
+            <li><strong>Date of Birth:</strong> {selectedGuru.dob}</li>
+            <li><strong>Date of Joti Jot:</strong> {selectedGuru.dod}</li>
+            <li><strong>Place of Birth:</strong> {selectedGuru.pob}</li>
+            <li><strong>Date of Guruship:</strong> {selectedGuru.Guruship}</li>
+          </ul>
+
+          <p className="text-gray-700 mt-4 text-sm">{selectedGuru.description}</p>
+          <p className="text-gray-600 mt-2 text-xs leading-relaxed">{selectedGuru.moreInfo}</p>
         </div>
-      )}
+      </div>
+    </div>
+  </div>
+)}
+
 
 
 
@@ -228,44 +244,57 @@ The Eternal Guru
 </div>
 </div>
 
-{/* modal */}
-
 {isGranthModalOpen && (
-  <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center">
-    <div className="bg-white rounded-xl shadow-xl max-w-[800px] w-full p-6 relative">
+  <div
+    className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center px-4"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div className="bg-white rounded-2xl shadow-2xl max-w-[800px] w-full p-6 relative animate-fadeIn">
+      {/* Close Button */}
       <button
-        className="absolute top-2 right-2 text-xl font-bold text-gray-700 hover:text-black"
+        aria-label="Close Modal"
+        className="absolute top-4 right-4 text-2xl text-gray-500 hover:text-black transition"
         onClick={closeGranthModal}
       >
         &times;
       </button>
-      <div className="flex flex-col items-center">
+
+      {/* Modal Content */}
+      <div className="flex flex-col items-center text-center">
         <img
           src="/tengurus/gurugranthsahibg.jpeg"
           alt="Guru Granth Sahib Ji"
-          className="w-[250px] h-[250px] object-cover rounded-lg mb-4"
+          className="w-[250px] h-[250px] object-cover rounded-xl shadow-md mb-4"
         />
-        <h2 className="text-2xl font-bold text-orange-600 mb-2">
+        <h2 className="text-3xl font-extrabold text-orange-600 mb-1">
           Shri Guru Granth Sahib Ji
         </h2>
-        <p className="text-gray-700 mb-2">The Eternal Guru of the Sikhs</p>
-        <p className="text-gray-600 text-sm mt-4">
-          Guru Granth Sahib Ji is revered as the eternal Guru of the Sikhs, containing the teachings of Sikh Gurus and other saints. It serves as a spiritual guide for Sikhs worldwide.
+        <p className="text-gray-800 text-sm font-medium">
+          The Eternal Guru of the Sikhs
+        </p>
+        <p className="text-gray-600 text-sm mt-4 leading-relaxed max-w-xl">
+          Guru Granth Sahib Ji is revered as the eternal Guru of the Sikhs, 
+          containing the divine teachings of Sikh Gurus and other enlightened saints. 
+          It is not just a scripture but a living spiritual guide that shapes the lives 
+          and values of Sikhs around the world.
         </p>
       </div>
     </div>
   </div>
 )}
+
+{/* Read More Button */}
 <button
   onClick={openGranthModal}
   className="mt-4 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition duration-200"
 >
   Read More
-</button> 
-</div>
+</button>
 
+</div>
     </>
   );
-};
+}
 
 export default Tengurus;
