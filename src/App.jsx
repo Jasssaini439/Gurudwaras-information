@@ -29,10 +29,7 @@ function App() {
          <Route path='/about' element={<About />} />
          <Route path='/contact' element={<Contact />} />
             <Route path='/donate' element={<DonateForm />} />
-        {/* <Route path='/' element={<HomePage/>} />
-         <Route path='/' element={<HomePage/>} />
-         <Route path='/' element={<HomePage/>} />
-         <Route path='/' element={<HomePage/>} /> */}
+       
        </Routes>
      <Footer/> 
    </Router>
